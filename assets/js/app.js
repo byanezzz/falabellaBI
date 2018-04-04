@@ -26,10 +26,6 @@ function SidebarCollapse() {
   // Collapse/Expand icon
   $("#collapse-icon").toggleClass("fa-angle-double-left fa-angle-double-right");
 }
-
-
-
-
 $("#tasks").click(function() {
   $('#dashboard').empty();
   $('#dashboard').append(`
@@ -154,6 +150,7 @@ function loadDashboard() {
       </div>
       <div class="row">
         <div class="col-xl-6">
+        <strong><h3 class="text-center">Resumen semanal</h3></strong>
           <div class="card">
             <div class="card-header">
               Estatus de Productos
@@ -164,6 +161,7 @@ function loadDashboard() {
           </div>
         </div>
         <div class="col-xl-6">
+        <strong><h3 class="text-center">Resumen Mensual</h3></strong>
           <div class="card">
             <div class="card-header">
               Problemas en Entregas
@@ -258,24 +256,6 @@ function loadDashboard() {
 }
 
 Chart.defaults.scale.ticks.beginAtZero = true;
-
-
-/*$('#inputSearch').change(function(){
-  $(camiones).each(function(){
-    if (this.patente == $('#inputSearch').val()){
-      let routeId = this.ruta;
-      let definedTime = [];
-
-      $(routes).each(function(){
-        if(routeId == this.id){
-          console.log(this["T. Estimado"])
-          console.log(this["T Real"])
-          totalTrucks()
-        }
-      })
-    }
-  })
-})*/
 
 function totalTrucks() {
   // GRAFICO DE BARRAS
