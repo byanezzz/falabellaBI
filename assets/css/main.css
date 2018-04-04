@@ -148,3 +148,11 @@ table.table thead th {
 .bg-dark {
   background-color: #7cc142 !important;
 }
+
+.noPadding {
+  padding: 0 !important;
+}
+
+#dashboard {
+  padding-left: 2em;
+}

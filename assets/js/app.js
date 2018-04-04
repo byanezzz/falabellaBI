@@ -57,7 +57,6 @@ $("#tasks").click(function() {
   }
 });
 
-
 $(document).ready(function() {
   loadDashboard();
   $("#two").hide();
@@ -153,26 +152,26 @@ function loadDashboard() {
 
   $("#Problemas").append(`
   <div class="row">
-  <div class=" col-5 progress">
+  <div class="noPadding col-5 progress">
   <div class="progress-bar bg-success" role="progressbar" style="width:${gps/totalProblemas*100}%" aria-valuenow="${gps}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
   </div><div class="col-2">${Math.round(gps/totalProblemas*100)}%</div>
   <div>GPS no funciona</div></div>
   <div class="row">
-  <div class=" col-5 progress">
+  <div class="noPadding col-5 progress">
   <div class="progress-bar bg-info" role="progressbar" style="width:${direccion/totalProblemas*100}%" aria-valuenow="${direccion}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
   </div><div class="col-2">${Math.round(direccion/totalProblemas*100)}%</div><div>Direcc no encontrada</div>
   </div>
   <div class="row">
-  <div class="col-5 progress">
+  <div class="noPadding col-5 progress">
   <div class="progress-bar bg-warning" role="progressbar" style="width: ${tecnica/totalProblemas*100}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
   </div><div class="col-2">${Math.round(tecnica/totalProblemas*100)}%</div><div>Falla Técnica</div>
   </div>
   <div class="row">
-  <div class="col-5 progress">
+  <div class="noPadding col-5 progress">
   <div class="progress-bar bg-danger" role="progressbar" style="width: ${trafico/totalProblemas*100}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
   </div><div class="col-2">${Math.round(trafico/totalProblemas*100)}%</div><div>Alto Tráfico</div></div>
   <div class="row">
-  <div class="col-5 progress">
+  <div class="noPadding col-5 progress">
   <div class="progress-bar bg-danger" role="progressbar" style="width: ${personal/totalProblemas*100}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
   </div><div class="col-2">${Math.round(personal/totalProblemas*100)}%</div><div>Personal</div></div>
   `)
