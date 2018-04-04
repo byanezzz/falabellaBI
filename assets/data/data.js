@@ -1,9 +1,9 @@
-const data = {
-    "camiones": [
+const camiones = [
       {
         "chofer": "Juan Lola",
         "patente": "DFAS21",
-        "ruta": 1
+        "ruta": 1,
+        "top": 2
       },
       {
         "chofer": "Pedro Alfonso",
@@ -23,7 +23,8 @@ const data = {
       {
         "chofer": "Camila Rock",
         "patente": "JKLÑ12",
-        "ruta": 5
+        "ruta": 5,
+        "top": 1
       },
       {
         "chofer": "Emilio Stone",
@@ -38,12 +39,14 @@ const data = {
       {
         "chofer": "Rick Man",
         "patente": "JKLÑ12",
-        "ruta": 8
+        "ruta": 8,
+        "top": 5
       },
       {
         "chofer": "Luis Larl",
         "patente": "JKLÑ12",
-        "ruta": 9
+        "ruta": 9,
+        "top": 3
       },
       {
         "chofer": "Alexandre Pocks",
@@ -53,22 +56,26 @@ const data = {
       {
         "chofer": "Camille Jinx",
         "patente": "JKLÑ12",
-        "ruta": 11
+        "ruta": 11,
+        "top": 4,
       },
       {
         "chofer": "Luana Button",
         "patente": "JKLÑ12",
-        "ruta": 12
+        "ruta": 12,
+        "top": 10
       },
       {
         "chofer": "Andrea",
         "patente": "JKLÑ12",
-        "ruta": 13
+        "ruta": 13,
+        "top": 6
       },
       {
         "chofer": "Daniela Azir",
         "patente": "JKLÑ12",
-        "ruta": 14
+        "ruta": 14,
+        "top": 9
       },
       {
         "chofer": "Darius Lemon",
@@ -78,7 +85,8 @@ const data = {
       {
         "chofer": "Garen Port",
         "patente": "JKLÑ12",
-        "ruta": 16
+        "ruta": 16,
+        "top": 8
       },
       {
         "chofer": "Leon Nerd",
@@ -98,7 +106,7 @@ const data = {
       {
         "chofer": "Paula Banaz",
         "patente": "JKLÑ12",
-        "ruta": 20
+        "ruta": 20,
+        "top": 7
       }
     ]
-  }
