@@ -2,104 +2,118 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Falabella BI</title>
-  <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-
-
-
-  <link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Falabella BI</title>
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="shortcut icon" href="./assets/img/logo-cuadrado-falabella.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
-  <!-- Bootstrap NavBar -->
-  <nav class="navbar navbar-expand-md navbar-dark nav-bg">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/3000px-Falabella.png" height="30" class="d-inline-block align-top" alt="">
-    </a>
 
-  </nav>
-  <!-- NavBar END -->
-
-
-  <!-- Bootstrap row -->
-  <div class="row" id="body-row">
-    <!-- Sidebar -->
-    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
-      <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
-      <!-- Bootstrap List Group -->
-      <ul class="list-group">
-        <!-- Separator with title -->
-        <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
-          <small>MAIN MENU</small>
-        </li>
-        <!-- /END Separator -->
-        <!-- Menu with submenu -->
-        <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-start align-items-center">
-            <span class="fa fa-tachometer-alt fa-fw mr-3"></span>
-            <span class="menu-collapsed">Dashboard</span>
-            <span class="submenu-icon ml-auto"></span>
-          </div>
+    <!-- Bootstrap NavBar -->
+    <nav class="navbar navbar-expand-md navbar-dark nav-bg">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/3000px-Falabella.png" height="30" class="d-inline-block align-top" alt="">
         </a>
-        <!-- Submenu content -->
-        <div id='submenu1' class="collapse sidebar-submenu">
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-            <span class="menu-collapsed">Charts</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-            <span class="menu-collapsed">Reports</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-            <span class="menu-collapsed">Tables</span>
-          </a>
+
+    </nav>
+    <!-- NavBar END -->
+
+
+    <!-- Bootstrap row -->
+    <div class="row" id="body-row">
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+            <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+            <!-- Bootstrap List Group -->
+            <ul class="list-group">
+                <!-- Separator with title -->
+                <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                    <small>MAIN MENU</small>
+                </li>
+                <!-- /END Separator -->
+                <!-- Menu with submenu -->
+                <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-tachometer-alt fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Dashboard</span>
+                        <span class="submenu-icon ml-auto"></span>
+                    </div>
+                </a>
+                <!-- Submenu content -->
+                <div id='submenu1' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Charts</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Reports</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Tables</span>
+                    </a>
+                </div>
+                <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-user fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Profile</span>
+                        <span class="submenu-icon ml-auto"></span>
+                    </div>
+                </a>
+                <!-- Submenu content -->
+                <div id='submenu2' class="collapse sidebar-submenu">
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Settings</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                        <span class="menu-collapsed">Password</span>
+                    </a>
+                </div>
+                <a href="#" class="bg-dark list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-tasks fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Tasks</span>
+                    </div>
+                </a>
+            </ul>
+            <!-- List Group END-->
         </div>
-        <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-start align-items-center">
-            <span class="fa fa-user fa-fw mr-3"></span>
-            <span class="menu-collapsed">Profile</span>
-            <span class="submenu-icon ml-auto"></span>
-          </div>
-        </a>
-        <!-- Submenu content -->
-        <div id='submenu2' class="collapse sidebar-submenu">
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-            <span class="menu-collapsed">Settings</span>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-            <span class="menu-collapsed">Password</span>
-          </a>
+        <!-- sidebar-container END -->
+
+        <!-- MAIN -->
+        <div class="col-xl-6">
+                <div id="donut_single" style="width: 900px; height: 500px;"></div>
         </div>
-        <a href="#" class="bg-dark list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-start align-items-center">
-            <span class="fa fa-tasks fa-fw mr-3"></span>
-            <span class="menu-collapsed">Tasks</span>
-          </div>
-        </a>
-      </ul>
-      <!-- List Group END-->
-    </div>
-    <!-- sidebar-container END -->
+        <div class="col-xl-2" id="Problemas">
+                
+        </div>
+        <!-- Main Col END -->
 
-    <!-- MAIN -->
-    <div class="col">
     </div>
-    <!-- Main Col END -->
+    <!-- body-row END -->
 
-  </div>
-  <!-- body-row END -->
-  <script src="node_modules/mdbootstrap/js/jquery-3.2.1.min.js"></script>
-  <script src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
-  <script src="node_modules/mdbootstrap/js/mdb.min.js"></script>
-  <script src="node_modules/mdbootstrap/js/popper.min.js"></script>
-  <script src="assets/js/app.js"></script>
+    <!-- Graficos -->
+
+
+
+    <script src="node_modules/mdbootstrap/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./assets/data/data.js"></script>
+    <script src="./assets/data/routes.js"></script>
+    <script src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+    <script src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+    <script src="node_modules/mdbootstrap/js/popper.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
 </body>
 
 </html>

@@ -1,28 +1,110 @@
 // Hide submenus
-$('#body-row .collapse').collapse('hide'); 
+$("#body-row .collapse").collapse("hide");
 
 // Collapse/Expand icon
-$('#collapse-icon').addClass('fa-angle-double-left'); 
+$("#collapse-icon").addClass("fa-angle-double-left");
 
 // Collapse click
-$('[data-toggle=sidebar-colapse]').click(function() {
-    SidebarCollapse();
+$("[data-toggle=sidebar-colapse]").click(function() {
+  SidebarCollapse();
 });
 
-function SidebarCollapse () {
-    $('.menu-collapsed').toggleClass('d-none');
-    $('.sidebar-submenu').toggleClass('d-none');
-    $('.submenu-icon').toggleClass('d-none');
-    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
-    
-    // Treating d-flex/d-none on separators with title
-    var SeparatorTitle = $('.sidebar-separator-title');
-    if ( SeparatorTitle.hasClass('d-flex') ) {
-        SeparatorTitle.removeClass('d-flex');
-    } else {
-        SeparatorTitle.addClass('d-flex');
+$(document).ready(function() {
+  console.log(data, "data");
+  console.log(routes, "viajes");
+});
+let contadorTrue = 0;
+let contadorFalse = 0;
+let gps = 0;
+let direccion =0;
+let tecnica =0;
+let trafico = 0;
+let personal = 0;
+let totalProblemas = 0;
+for (let i = 0; i < routes.length; i++) {
+  if (routes[i].Realizacion === true) {
+    contadorTrue++;
+  } else {
+    contadorFalse++;
+  }
+  if (routes[i].Problemas) {
+    for (let k = 0; k < routes[i].Problemas.length; k++) {
+        totalProblemas ++
+      if (routes[i].Problemas[k].Tipo === "GPS no funciona") {
+        gps++;
+      } else if (routes[i].Problemas[k].Tipo === "Direccion no encontrada") {
+        direccion++;
+      } else if (routes[i].Problemas[k].Tipo === "Falla Técnica") {
+        tecnica++;
+      } else if (routes[i].Problemas[k].Tipo === "Alto tráfico") {
+        trafico++;
+      } else {
+        personal++;
+      }
     }
-    
-    // Collapse/Expand icon
-    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+  }
 }
+porcentajeTrue = contadorTrue / routes.length * 100;
+console.log(gps, 'gps');
+console.log(direccion, 'direccion');
+console.log(tecnica, 'tecnica');
+console.log(trafico, 'trafico');
+console.log(personal, 'personal');
+function SidebarCollapse() {
+  $(".menu-collapsed").toggleClass("d-none");
+  $(".sidebar-submenu").toggleClass("d-none");
+  $(".submenu-icon").toggleClass("d-none");
+  $("#sidebar-container").toggleClass("sidebar-expanded sidebar-collapsed");
+
+  // Treating d-flex/d-none on separators with title
+  var SeparatorTitle = $(".sidebar-separator-title");
+  if (SeparatorTitle.hasClass("d-flex")) {
+    SeparatorTitle.removeClass("d-flex");
+  } else {
+    SeparatorTitle.addClass("d-flex");
+  }
+
+  // Collapse/Expand icon
+  $("#collapse-icon").toggleClass("fa-angle-double-left fa-angle-double-right");
+}
+
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ["Productos", "Porcentaje"],
+    ["Entregados", porcentajeTrue],
+    ["Pendiente", 100 - porcentajeTrue]
+  ]);
+
+  var options = {
+    pieHole: 0.5,
+    pieSliceTextStyle: {
+      color: "black"
+    },
+    legend: "none"
+  };
+
+  var chart = new google.visualization.PieChart(
+    document.getElementById("donut_single")
+  );
+  chart.draw(data, options);
+}
+
+$("#Problemas").append(`<div class="progress">
+<div class="progress-bar bg-success" role="progressbar" style="width:${gps/totalProblemas*100}%" aria-valuenow="${gps}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
+</div>
+<div class="progress">
+<div class="progress-bar bg-info" role="progressbar" style="width:${direccion/totalProblemas*100}%" aria-valuenow="${direccion}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
+</div>
+<div class="progress">
+<div class="progress-bar bg-warning" role="progressbar" style="width: ${tecnica/totalProblemas*100}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+<div class="progress-bar bg-danger" role="progressbar" style="width: ${trafico/totalProblemas*100}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+<div class="progress-bar bg-danger" role="progressbar" style="width: ${personal/totalProblemas*100}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+`)

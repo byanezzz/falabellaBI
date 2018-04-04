@@ -1,3 +1,12 @@
+.navbar{
+    background-color: black
+}
+
+#greenLine{
+    height: .5em;
+    background-color: #7cc142;
+}
+
 #body-row {
   margin-left: 0;
   margin-right: 0;
