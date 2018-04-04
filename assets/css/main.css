@@ -108,5 +108,9 @@ rect {
 
 .progress {
   margin-bottom: 1em;
-  height: 2em;
+  height: 2.3em;
+}
+
+#nTrabajadores {
+  padding: 2em;
 }

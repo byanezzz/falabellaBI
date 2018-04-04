@@ -78,18 +78,18 @@ function drawChart() {
   ]);
 
   var options = {
-    pieHole: 0.5,
-    pieSliceTextStyle: {
-      color: "black"
-    },
-    legend: "none"
+    pieHole: 0.4,
+    colors: ['#7cc142', 'rgb(20, 45, 60)']
   };
 
-  var chart = new google.visualization.PieChart(
-    document.getElementById("donut_single")
-  );
+  var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
   chart.draw(data, options);
 }
+
+
+
+
+
 
 $("#Problemas").append(`
 <div class="row">
@@ -100,7 +100,7 @@ $("#Problemas").append(`
 <div class="row">
 <div class=" col-5 progress">
 <div class="progress-bar bg-info" role="progressbar" style="width:${direccion/totalProblemas*100}%" aria-valuenow="${direccion}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
-</div><div class="col-2">${Math.round(direccion/totalProblemas*100)}%</div><div>Dirección no encontrada</div>
+</div><div class="col-2">${Math.round(direccion/totalProblemas*100)}%</div><div>Direcc no encontrada</div>
 </div>
 <div class="row">
 <div class="col-5 progress">
