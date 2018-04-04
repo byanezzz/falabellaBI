@@ -34,6 +34,11 @@ $("#tasks").click(function() {
   $('#dashboard').empty();
   $('#dashboard').append(`
     <div class="row">
+    <div class="container-canvas">
+        <canvas id="personalRoutes"></canvas>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-xl-6" id="choferes">
       <table class="table" id="myTable">
         <thead>
@@ -59,6 +64,7 @@ $("#tasks").click(function() {
       </table>
     </div>
   </div>`)
+  totalTrucks();
   for (let i = 0; i < camiones.length; i++) {
     if (camiones[i].top) {
       $('#nombre').append(`
@@ -92,34 +98,82 @@ $('#submenu1').click(function() {
 })
 
 function loadDashboard() {
-  $('#dashboard').append(`<div class="row">
-            <div class="col-xs-12" id="nTrabajadores">
+  $('#dashboard').append(`
+      <div class="row">
+        <div class="col"
+          <div class="card">
+            <div class="card-header">
+              Total de Trabajadores
             </div>
           </div>
-          <div class="row">
-            <div class="col-xl-6">
-              <div class="card">
-                <div class="card-header">
-                  Estatus de Productos
-                </div>
-                <div class="card-body">
-                  <div id="donut_single" style=""></div>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div class="row totalWorkers">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Total de Trabajadores
             </div>
-            <div class="col-xl-6">
-              <div class="card">
-                <div class="card-header">
-                  Problemas en Entregas
-                </div>
-                <div class="card-body">
-                  <div class="" id="Problemas">
-                  </div>
-                </div>
+            <div class="card-body">
+              <p>20</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Trabajadores Disponibles
+            </div>
+            <div class="card-body">
+              <p>3</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Total de Entregas
+            </div>
+            <div class="card-body">
+              <p>267</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Total de Conflictos
+            </div>
+            <div class="card-body">
+              <p>3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="card">
+            <div class="card-header">
+              Estatus de Productos
+            </div>
+            <div class="card-body">
+              <div id="donut_single" style=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card">
+            <div class="card-header">
+              Problemas en Entregas
+            </div>
+            <div class="card-body">
+              <div class="" id="Problemas">
               </div>
             </div>
           </div>
-          `);
+        </div>
+      </div>
+      `);
   let contadorTrue = 0;
   let contadorFalse = 0;
   let gps = 0;
@@ -183,7 +237,7 @@ function loadDashboard() {
   <div class="row">
   <div class="noPadding col-5 progress">
   <div class="progress-bar bg-info" role="progressbar" style="width:${direccion/totalProblemas*100}%" aria-valuenow="${direccion}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
-  </div><div class="col-2">${Math.round(direccion/totalProblemas*100)}%</div><div>Direcc no encontrada</div>
+  </div><div class="col-2">${Math.round(direccion/totalProblemas*100)}%</div><div>Direción no encontrada</div>
   </div>
   <div class="row">
   <div class="noPadding col-5 progress">
@@ -199,4 +253,52 @@ function loadDashboard() {
   <div class="progress-bar bg-danger" role="progressbar" style="width: ${personal/totalProblemas*100}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
   </div><div class="col-2">${Math.round(personal/totalProblemas*100)}%</div><div>Personal</div></div>
   `)
+}
+
+Chart.defaults.scale.ticks.beginAtZero = true;
+
+
+/*$('#inputSearch').change(function(){
+  $(camiones).each(function(){
+    if (this.patente == $('#inputSearch').val()){
+      let routeId = this.ruta;
+      let definedTime = [];
+
+      $(routes).each(function(){
+        if(routeId == this.id){
+          console.log(this["T. Estimado"])
+          console.log(this["T Real"])
+          totalTrucks()
+        }
+      })
+    }
+  })
+})*/
+
+function totalTrucks(){
+  // GRAFICO DE BARRAS
+      var personalRoutes = document.getElementById("personalRoutes");
+      var barChart = new Chart(personalRoutes, {
+        type:"bar",
+        data: {
+          datasets:[{
+            label:"T. Definido",
+            data: [2,3,7,8,3,7,8,2,9,21],
+            backgroundColor: "#212529",
+          },
+          {
+            label:"T. Real",
+            data: [5,6,8,3,3,13,5,12,23,2],
+            backgroundColor: "#7cc142",
+          }],
+          labels: ["FGH679", "DFAS21", "JKLÑ12", "DFAS21", "JKLÑ12" , "DFAS21", "JKLÑ12", "FGH679", "DFAS21", "JKLÑ12"],
+        },
+        options : {
+          responsive : true,
+          title: {
+                  display: true,
+                  text: `Cumplimiento total de Camiones`,
+              }
+        },
+      });
 }
