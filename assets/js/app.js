@@ -9,6 +9,22 @@ $("[data-toggle=sidebar-colapse]").click(function() {
   SidebarCollapse();
 });
 
+for(let i=0; i<camiones.length; i++){
+    if(camiones[i].top){
+        $('#nombre').append(`
+        <tr>
+        <td>${camiones[i].top}</td>
+        <td>${camiones[i].chofer}</td>
+        </tr>        
+            `);
+    }     
+}
+
+$("#tasks").click(function() {
+    $("#one").hide();
+    $("#two").show();
+  });
+
 function SidebarCollapse() {
   $(".menu-collapsed").toggleClass("d-none");
   $(".sidebar-submenu").toggleClass("d-none");
@@ -26,7 +42,9 @@ function SidebarCollapse() {
   // Collapse/Expand icon
   $("#collapse-icon").toggleClass("fa-angle-double-left fa-angle-double-right");
 }
-$(document).ready(function() {});
+$(document).ready(function() {
+    $("#two").hide();
+});
 console.log(routes);
 let contadorTrue = 0;
 let contadorFalse = 0;
@@ -60,11 +78,7 @@ for (let i = 0; i < routes.length; i++) {
   }
 }
 porcentajeTrue = contadorTrue / routes.length * 100;
-console.log(gps, 'gps');
-console.log(direccion, 'direccion');
-console.log(tecnica, 'tecnica');
-console.log(trafico, 'trafico');
-console.log(personal, 'personal');
+
 
 
 google.charts.load("current", { packages: ["corechart"] });
@@ -112,4 +126,3 @@ $("#Problemas").append(`
 </div><div class="col-2">${Math.round(personal/totalProblemas*100)}%</div><div>Personal</div></div>
 `)
 
-$('#nTrabajadores').append(`<div> <p>${data.camiones.length}</p> </div>`)
