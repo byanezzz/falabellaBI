@@ -1,11 +1,11 @@
-{
-  "routes": [{
+const routes =
+ [{
       "id": 1,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": false,
       "Problemas": [{
           "id": 1,
           "Tipo": "Alto tráfico",
@@ -14,13 +14,13 @@
         },
         {
           "id": 2,
-          "Tipo": "GPS no funciona",
+          "Tipo": "Direccion no encontrada",
           "Comuna": "Ñuñoa",
           "Destino": "Los Leones 123"
         },
         {
           "id": 3,
-          "Tipo": "Dirección no encontrada",
+          "Tipo": "Direccion no encontrada",
           "Comuna": "Ñuñoa",
           "Destino": "Recoleta 12"
         },
@@ -40,19 +40,19 @@
     },
     {
       "id": 2,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true
+      "Realizacion": false
     },
     {
       "id": 3,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": false,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -69,11 +69,11 @@
     },
     {
       "id": 3,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": false,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -90,11 +90,11 @@
     },
     {
       "id": 5,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -111,11 +111,11 @@
     },
     {
       "id": 6,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -132,11 +132,11 @@
     },
     {
       "id": 7,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -153,11 +153,11 @@
     },
     {
       "id": 8,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -174,11 +174,11 @@
     },
     {
       "id": 9,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -195,11 +195,11 @@
     },
     {
       "id": 10,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -216,11 +216,11 @@
     },
     {
       "id": 11,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -237,11 +237,11 @@
     },
     {
       "id": 12,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -258,11 +258,11 @@
     },
     {
       "id": 13,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -279,11 +279,11 @@
     },
     {
       "id": 14,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -300,11 +300,11 @@
     },
     {
       "id": 15,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -321,11 +321,11 @@
     },
     {
       "id": 16,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -342,11 +342,11 @@
     },
     {
       "id": 17,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -363,32 +363,19 @@
     },
     {
       "id": 18,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
-      "Problemas": [{
-          "id": 1,
-          "Tipo": "Personal",
-          "Comuna": "Recoleta",
-          "Destino": "Puma 1180"
-        },
-        {
-          "id": 2,
-          "Tipo": "GPS no funciona",
-          "Comuna": "Providencia",
-          "Destino": "Los Leones 123"
-        }
-      ]
+      "Realizacion": true,
     },
     {
       "id": 19,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -405,11 +392,11 @@
     },
     {
       "id": 20,
-      "Dirección": "Vicuña Mackena 345",
+      "Direccion": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realizacion": true,
       "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
@@ -426,4 +413,3 @@
     }
 
   ]
-}
