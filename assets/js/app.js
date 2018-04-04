@@ -86,11 +86,6 @@ function drawChart() {
   chart.draw(data, options);
 }
 
-
-
-
-
-
 $("#Problemas").append(`
 <div class="row">
 <div class=" col-5 progress">
