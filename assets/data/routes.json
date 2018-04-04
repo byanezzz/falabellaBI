@@ -1,42 +1,40 @@
 {
-  "routes": [
-    {
+  "routes": [{
       "id": 1,
       "Dirección": "Vicuña Mackena 345",
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Alto tráfico",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Ñuñoa",
-          "Destino": "Los Leones 123",
+          "Destino": "Los Leones 123"
         },
         {
           "id": 3,
           "Tipo": "Dirección no encontrada",
           "Comuna": "Ñuñoa",
-          "Destino": "Recoleta 12",
+          "Destino": "Recoleta 12"
         },
         {
           "id": 4,
           "Tipo": "Falla Técnica",
           "Comuna": "Providencia",
-          "Destino": "Providencia 675",
+          "Destino": "Providencia 675"
         },
         {
           "id": 5,
           "Tipo": "Personal",
           "Comuna": "Macul",
-          "Destino": "Macul 1234",
+          "Destino": "Macul 1234"
         }
       ]
     },
@@ -46,7 +44,7 @@
       "T. Estimado": "20 min",
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
-      "Realización": true,
+      "Realización": true
     },
     {
       "id": 3,
@@ -55,19 +53,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -77,19 +74,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -99,19 +95,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -121,19 +116,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -143,19 +137,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -165,19 +158,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -187,19 +179,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -209,19 +200,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -231,19 +221,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -253,19 +242,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -275,19 +263,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -297,19 +284,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -319,19 +305,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -341,19 +326,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -363,19 +347,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -385,19 +368,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -407,19 +389,18 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
     },
     {
@@ -429,21 +410,20 @@
       "T Real": "20 min",
       "Creación de Ruta": "Manual",
       "Realización": true,
-      "Problemas": [
-        {
+      "Problemas": [{
           "id": 1,
           "Tipo": "Personal",
           "Comuna": "Recoleta",
-          "Destino": "Puma 1180",
+          "Destino": "Puma 1180"
         },
         {
           "id": 2,
           "Tipo": "GPS no funciona",
           "Comuna": "Providencia",
-          "Destino": "Los Leones 123",
-        },
+          "Destino": "Los Leones 123"
+        }
       ]
-    },
+    }
 
   ]
 }
