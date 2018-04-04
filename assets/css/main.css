@@ -37,8 +37,6 @@
 #sidebar-container .list-group a {
   height: 25vh;
   color: white;
-
-
 }
 
 .list-group .list-group-item:first-child {
@@ -46,10 +44,12 @@
   border-top-right-radius: .125rem;
   background-color: #7cc142 !important;
 }
-.list-group img{
-  width: 8em;
-  height: 8em;
+
+.list-group img {
+  width: 5em;
+  height: 5em;
 }
+
 
 /* Submenu item*/
 
@@ -127,10 +127,11 @@ rect {
   height: 2em;
 }
 
-.table{
+.table {
   margin: 1rem;
   text-align: center;
 }
+
 table.table thead th {
   border-top: none;
   background: black;
@@ -138,11 +139,12 @@ table.table thead th {
   font-weight: 900;
 }
 
-#imagen{
+#imagen {
   display: flex;
   justify-content: center;
   color: black;
 }
+
 .bg-dark {
   background-color: #7cc142 !important;
 }
