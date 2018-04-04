@@ -32,22 +32,46 @@ function SidebarCollapse() {
 
 $("#tasks").click(function() {
   $('#dashboard').empty();
-  $('#dashboard').append(`<div class="col-xl-6" id="choferes">
-  <table class="table" id="myTable">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre</th>
-      </tr>
-    </thead>
-    <tbody id="nombre">
-    </tbody>
-  </table>
-</div>
-`)
+  $('#dashboard').append(`
+    <div class="row">
+      <div class="col-xl-6" id="choferes">
+      <table class="table" id="myTable">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+          </tr>
+        </thead>
+        <tbody id="nombre">
+        </tbody>
+      </table>
+    </div>
+    <div class="col-xl-6" id="choferes2">
+      <table class="table" id="myTable2">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+          </tr>
+        </thead>
+        <tbody id="nombre2">
+        </tbody>
+      </table>
+    </div>
+  </div>`)
   for (let i = 0; i < camiones.length; i++) {
     if (camiones[i].top) {
       $('#nombre').append(`
+        <tr>
+        <td>${camiones[i].top}</td>
+        <td>${camiones[i].chofer}</td>
+        </tr>        
+            `);
+    }
+  }
+  for (let i = 19; i < camiones.length; i--) {
+    if (camiones[i].top) {
+      $('#nombre2').append(`
         <tr>
         <td>${camiones[i].top}</td>
         <td>${camiones[i].chofer}</td>
