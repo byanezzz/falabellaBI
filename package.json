@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "font-awesome": "^4.7.0",
+    "font-awesome-5-css": "^5.0.8",
     "mdbootstrap": "^4.5.0"
   }
 }
