@@ -122,9 +122,10 @@ rect {
   height: 2.3em;
 }
 
-#nTrabajadores {
-  padding: 2em;
-  height: 2em;
+.totalWorkers{
+  margin-left: 0;
+  margin: 1em 0;
+  text-align: center; 
 }
 
 .table {
@@ -155,4 +156,7 @@ table.table thead th {
 
 #dashboard {
   padding-left: 2em;
+}
+.container-canvas{
+  width: 100%;
 }
