@@ -109,3 +109,7 @@ rect {
   margin-bottom: 1em;
   height: 2em;
 }
+
+#nTrabajadores {
+  padding: 2em;
+}
