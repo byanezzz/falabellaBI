@@ -9,15 +9,30 @@ $("[data-toggle=sidebar-colapse]").click(function() {
   SidebarCollapse();
 });
 
-$(document).ready(function() {
-  console.log(data, "data");
-  console.log(routes, "viajes");
-});
+function SidebarCollapse() {
+  $(".menu-collapsed").toggleClass("d-none");
+  $(".sidebar-submenu").toggleClass("d-none");
+  $(".submenu-icon").toggleClass("d-none");
+  $("#sidebar-container").toggleClass("sidebar-expanded sidebar-collapsed");
+
+  // Treating d-flex/d-none on separators with title
+  var SeparatorTitle = $(".sidebar-separator-title");
+  if (SeparatorTitle.hasClass("d-flex")) {
+    SeparatorTitle.removeClass("d-flex");
+  } else {
+    SeparatorTitle.addClass("d-flex");
+  }
+
+  // Collapse/Expand icon
+  $("#collapse-icon").toggleClass("fa-angle-double-left fa-angle-double-right");
+}
+$(document).ready(function() {});
+console.log(routes);
 let contadorTrue = 0;
 let contadorFalse = 0;
 let gps = 0;
-let direccion =0;
-let tecnica =0;
+let direccion = 0;
+let tecnica = 0;
 let trafico = 0;
 let personal = 0;
 let totalProblemas = 0;
@@ -29,7 +44,7 @@ for (let i = 0; i < routes.length; i++) {
   }
   if (routes[i].Problemas) {
     for (let k = 0; k < routes[i].Problemas.length; k++) {
-        totalProblemas ++
+      totalProblemas++
       if (routes[i].Problemas[k].Tipo === "GPS no funciona") {
         gps++;
       } else if (routes[i].Problemas[k].Tipo === "Direccion no encontrada") {
@@ -50,23 +65,7 @@ console.log(direccion, 'direccion');
 console.log(tecnica, 'tecnica');
 console.log(trafico, 'trafico');
 console.log(personal, 'personal');
-function SidebarCollapse() {
-  $(".menu-collapsed").toggleClass("d-none");
-  $(".sidebar-submenu").toggleClass("d-none");
-  $(".submenu-icon").toggleClass("d-none");
-  $("#sidebar-container").toggleClass("sidebar-expanded sidebar-collapsed");
 
-  // Treating d-flex/d-none on separators with title
-  var SeparatorTitle = $(".sidebar-separator-title");
-  if (SeparatorTitle.hasClass("d-flex")) {
-    SeparatorTitle.removeClass("d-flex");
-  } else {
-    SeparatorTitle.addClass("d-flex");
-  }
-
-  // Collapse/Expand icon
-  $("#collapse-icon").toggleClass("fa-angle-double-left fa-angle-double-right");
-}
 
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
@@ -92,19 +91,30 @@ function drawChart() {
   chart.draw(data, options);
 }
 
-$("#Problemas").append(`<div class="progress">
+$("#Problemas").append(`
+<div class="row">
+<div class=" col-5 progress">
 <div class="progress-bar bg-success" role="progressbar" style="width:${gps/totalProblemas*100}%" aria-valuenow="${gps}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
-</div>
-<div class="progress">
+</div><div class="col-2">${Math.round(gps/totalProblemas*100)}%</div>
+<div>GPS no funciona</div></div>
+<div class="row">
+<div class=" col-5 progress">
 <div class="progress-bar bg-info" role="progressbar" style="width:${direccion/totalProblemas*100}%" aria-valuenow="${direccion}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
+</div><div class="col-2">${Math.round(direccion/totalProblemas*100)}%</div><div>Dirección no encontrada</div>
 </div>
-<div class="progress">
+<div class="row">
+<div class="col-5 progress">
 <div class="progress-bar bg-warning" role="progressbar" style="width: ${tecnica/totalProblemas*100}%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div><div class="col-2">${Math.round(tecnica/totalProblemas*100)}%</div><div>Falla Técnica</div>
 </div>
-<div class="progress">
+<div class="row">
+<div class="col-5 progress">
 <div class="progress-bar bg-danger" role="progressbar" style="width: ${trafico/totalProblemas*100}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
+</div><div class="col-2">${Math.round(trafico/totalProblemas*100)}%</div><div>Alto Tráfico</div></div>
+<div class="row">
+<div class="col-5 progress">
 <div class="progress-bar bg-danger" role="progressbar" style="width: ${personal/totalProblemas*100}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
+</div><div class="col-2">${Math.round(personal/totalProblemas*100)}%</div><div>Personal</div></div>
 `)
+
+$('#nTrabajadores').append(`<div> <p>${data.camiones.length}</p> </div>`)

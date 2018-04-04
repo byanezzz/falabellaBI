@@ -1,20 +1,20 @@
-.navbar{
-    background-color: black
+.navbar {
+  background-color: black
 }
 
-#greenLine{
-    height: .5em;
-    background-color: #7cc142;
+#greenLine {
+  height: .5em;
+  background-color: #7cc142;
 }
 
 #body-row {
-    margin-left:0;
-    margin-right:0;
-    padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
 }
 
 #sidebar-container {
- min-height: 100vh;
+  min-height: 100vh;
   background-color: #333;
   padding: 0;
 }
@@ -96,10 +96,16 @@
   border-top: 5px solid #7cc142;
   background-color: #000;
 }
-rect{
-    width: auto !important;
+
+rect {
+  width: auto !important;
 }
 
-.container-fluid{
-    height: 100vh;
+.container-fluid {
+  height: 100vh;
+}
+
+.progress {
+  margin-bottom: 1em;
+  height: 2em;
 }
