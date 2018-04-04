@@ -87,13 +87,53 @@ $("#tasks").click(function() {
 
 $(document).ready(function() {
   loadDashboard();
-  $("#two").hide();
 });
 
 $('#submenu1').click(function() {
   $('#dashboard').empty();
   loadDashboard();
 })
+
+$('#submenu2').click(function() {
+  $('#dashboard').empty();
+  $('#dashboard').append(`
+  <div class="row">
+  <div class="container-canvas">
+      <canvas id="personalRoutes"></canvas>
+    </div>
+  </div>`)
+  drawChart2();
+
+})
+
+function drawChart2() {
+  // GRAFICO DE BARRAS
+  var personalRoutes = document.getElementById("personalRoutes");
+  var barChart = new Chart(personalRoutes, {
+    type: "bar",
+    data: {
+      datasets: [{
+          label: "Real",
+          data: [5, 7, 7, 5],
+          backgroundColor: "#212529",
+        },
+        {
+          label: "Proyectado",
+          data: [5, 6, 8, 3, 3, 13, 5, 12, 23, 23, 25, 30],
+          backgroundColor: "#7cc142",
+        }
+      ],
+      labels: ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"],
+    },
+    options: {
+      responsive: true,
+      title: {
+        display: true,
+        text: `Camiones Empleados`,
+      }
+    },
+  });
+}
 
 function loadDashboard() {
   $('#dashboard').append(`
@@ -212,6 +252,7 @@ function loadDashboard() {
   google.charts.load("current", { packages: ["corechart"] });
   google.charts.setOnLoadCallback(drawChart);
 
+
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ["Productos", "Porcentaje"],
@@ -227,6 +268,8 @@ function loadDashboard() {
     var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
     chart.draw(data, options);
   }
+
+
 
   $("#Problemas").append(`
   <div class="row">
