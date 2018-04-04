@@ -99,43 +99,81 @@ $('#submenu1').click(function() {
 
 function loadDashboard() {
   $('#dashboard').append(`
-      
+      <div class="row">
+        <div class="col"
+          <div class="card">
+            <div class="card-header">
+              Total de Trabajadores
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row totalWorkers">
-            <div class="col-xs-12" id="nTrabajadores">
-            <div class="card">
-                <div class="card-header">
-                  Total de Trabajores
-                </div>
-                <div class="card-body">
-                  <p>20</p>
-                </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Total de Trabajadores
+            </div>
+            <div class="card-body">
+              <p>20</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Trabajadores Disponibles
+            </div>
+            <div class="card-body">
+              <p>3</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Total de Entregas
+            </div>
+            <div class="card-body">
+              <p>267</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Total de Conflictos
+            </div>
+            <div class="card-body">
+              <p>3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6">
+          <div class="card">
+            <div class="card-header">
+              Estatus de Productos
+            </div>
+            <div class="card-body">
+              <div id="donut_single" style=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <div class="card">
+            <div class="card-header">
+              Problemas en Entregas
+            </div>
+            <div class="card-body">
+              <div class="" id="Problemas">
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xl-6">
-              <div class="card">
-                <div class="card-header">
-                  Estatus de Productos
-                </div>
-                <div class="card-body">
-                  <div id="donut_single" style=""></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-6">
-              <div class="card">
-                <div class="card-header">
-                  Problemas en Entregas
-                </div>
-                <div class="card-body">
-                  <div class="" id="Problemas">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          `);
+        </div>
+      </div>
+      `);
   let contadorTrue = 0;
   let contadorFalse = 0;
   let gps = 0;
