@@ -35,6 +35,7 @@ $("#tasks").click(function() {
   $('#dashboard').append(`
     <div class="row">
       <div class="col-xl-6" id="choferes">
+      <h3 class="text-center">TOP 10</h3>
       <table class="table" id="myTable">
         <thead>
           <tr>
@@ -47,6 +48,7 @@ $("#tasks").click(function() {
       </table>
     </div>
     <div class="col-xl-6" id="choferes2">
+    <h3 class="text-center">LOWEST 10</h3>
       <table class="table" id="myTable2">
         <thead>
           <tr>
@@ -183,7 +185,7 @@ function loadDashboard() {
   <div class="row">
   <div class="noPadding col-5 progress">
   <div class="progress-bar bg-info" role="progressbar" style="width:${direccion/totalProblemas*100}%" aria-valuenow="${direccion}" aria-valuemin="0" aria-valuemax="${totalProblemas}"></div>
-  </div><div class="col-2">${Math.round(direccion/totalProblemas*100)}%</div><div>Direcc no encontrada</div>
+  </div><div class="col-2">${Math.round(direccion/totalProblemas*100)}%</div><div>Dirección no encontrada</div>
   </div>
   <div class="row">
   <div class="noPadding col-5 progress">
